@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+
+header{
+    background-color: #2034EA;
+    padding: 20px 0px;
+}
+
+header h4{
+    font-size: 26px;
+    color: white;
+}
+
+
+nav{
+    background-color: #8894FF;
+    padding: 20px 0px;
+}
+
+nav a{
+    text-decoration: none;
+    margin-right: 50px;
+    color: white;
+}
+
+nav a:hover{
+    color: green;
+}
+
+.banner{
+    text-align: center;
+    background: url("bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0px;
+    color: #ffffff;
+}
+
+.banner h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.banner a{
+    padding: 20px 40px;
+    background-color: #71D761;
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.jobs-wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.job-child-1, 
+.job-child-2,
+.job-child-3{
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.job-child-1{
+    background: #0C445C;
+    
+}
+
+.job-child-2{
+    background: #5B2C98;
+}
+
+.job-child-3{
+    background: #7F3219;
+}
