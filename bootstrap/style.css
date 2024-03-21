@@ -15,6 +15,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
 
 a{
     text-decoration: none;
+    display: inline-block;
 }
 
 ul{
@@ -60,7 +61,8 @@ ul{
 .banner,
 .fast,
 .lightweight,
-.pricing{
+.pricing,
+.create-acc{
     padding: 100px 0px;
 }
 
@@ -205,6 +207,33 @@ ul{
 
 /* Works end */
 
+/* Create acc start */
+.individual{
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.create-acc .individual a{
+    color: #ffffff;
+    font-weight: 600;
+} 
+
+.business{
+    background-color: #ECECFE;
+    color: var(--primary-color);
+}
+
+.create-acc .business a{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.individual,.business{
+    padding: 30px;
+    border-radius: 20px;
+}
+/* Create acc end */
+
 @media (min-width: 768px){
     .lightweight h2 > span{
         display: block;
@@ -220,6 +249,11 @@ ul{
      }
 }
 
+@media (min-width: 1200px){
+   .individual{
+    min-height: 312px;
+   }
+}
 
 @media (max-width: 1200px){
     .lightweight-wrapper h2 {
