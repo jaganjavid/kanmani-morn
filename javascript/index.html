@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrolling Box</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box {
+    width: 200px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin: 50px auto;
+    transition: height 0.3s ease;
+    overflow: hidden;
+  }
+  .content {
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="box" id="box">
+  <div class="content">
+  </div>
+</div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    var box = document.getElementById('box');
+    var scrollHeight = document.documentElement.scrollTop;
+    box.style.height = (100 + scrollHeight) + 'px'; // Increase height based on scroll position
+  });
+</script>
+
+</body>
+</html>
