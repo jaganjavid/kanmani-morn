@@ -32,10 +32,17 @@ function greet(firstName = "John", lastName = "Doe"){
 
 // add(5,5);
 
-var add = function(x, y){
-  console.log(x + y);
-}
 
 
-add(5,5);
+// var add = function(x, y){
+//   console.log(x + y);
+// }
 
+
+// add(5,5);
+
+// Immediately invoked function expression)
+
+(function(name){
+  console.log(`Hello ${name}`)
+})("Jagan");
