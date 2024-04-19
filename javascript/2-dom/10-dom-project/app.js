@@ -144,24 +144,62 @@ function removeTask(e){
     if(e.target.parentElement.classList.contains("delete-item")){
        if(confirm("Are you sure")){
          e.target.parentElement.parentElement.remove();
+         removeTaskFromLocalStorage(e.target.parentElement.parentElement);
        }
     }
 
 }
+
+// function removeTaskFromLocalStorage(taskElement){
+
+//     let tasks;
+
+//     if(localStorage.getItem("tasks") === null){
+//         tasks = [];
+//     } else {
+//        tasks = JSON.parse(localStorage.getItem("tasks"));
+//     }
+    
+  
+//     tasks.forEach(function(task, index){
+//         if(taskElement.innerText === task){
+//           tasks.splice(index,1)
+//         }
+//     })
+
+//     localStorage.setItem("tasks", JSON.stringify(tasks));
+
+// }
+
+function removeTaskFromLocalStorage(taskElement) {
+    // Get tasks from localStorage or initialize an empty array
+    let tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+
+    // Find index of the task to remove
+    const indexToRemove = tasks.findIndex(task => task === taskElement.innerText);
+
+    // Remove the task if found
+    if (indexToRemove !== -1) {
+        tasks.splice(indexToRemove, 1);
+    }
+
+    // Update localStorage with the updated tasks array
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+
 
 // Clear All Tasks
 
 function clearTask(){
     taskList.innerHTML = "";
     // taskList.remove();
+
+    clearTaskFromLocalStorage();
 }
 
-
-
-const x = 5;
-
-if(x === 5){
-    console.log("Yes");
+function clearTaskFromLocalStorage(){
+    localStorage.removeItem("tasks");
 }
 
 
@@ -180,3 +218,20 @@ if(x === 5){
 
 // console.log(stringToArray);
 
+
+// const colors = ["red", "green", "blue"];
+
+
+// colors.splice(1,0,"orange");
+
+
+// console.log(colors);
+
+
+const array = [1,2,3,4,5];
+
+const result = array.findIndex(function(item){
+    return item === 4
+});
+
+console.log(result);
