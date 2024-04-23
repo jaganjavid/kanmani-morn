@@ -27,3 +27,5 @@ taskTitle.innerText = "Hello";
 
 document.querySelector("li").style.color = 'green';
 document.querySelector("li:nth-child(2)").style.color = 'blue';
+
+console.log("Hello")

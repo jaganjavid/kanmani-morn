@@ -32,3 +32,6 @@ function deleteItem(e){
     
 
 }
+
+
+console.log("Hello")
